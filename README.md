@@ -31,7 +31,7 @@ This diagram illustrates the components of the self-contained application and ho
 
 ```mermaid
 graph TD
-    subgraph SelfContainedJavaApplication(JAR)
+    subgraph SelfContainedJavaApplication
         A[IntegratedRAGSystem Core]
         B[Embedded Tomcat Server]
         C[InferenceServlet]
