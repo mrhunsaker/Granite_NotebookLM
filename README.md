@@ -31,7 +31,7 @@ This diagram illustrates the components of the self-contained application and ho
 
 ```mermaid
 graph TD
-    subgraph SelfContainedJavaApplication
+    subgraph Self Contained Java Application
         A[IntegratedRAGSystem Core]
         B[Embedded Tomcat Server]
         C[InferenceServlet]
@@ -50,12 +50,12 @@ graph TD
         H -->|Uses| TESS[Tesseract OCR]
     end
 
-    subgraph ExternalDependencies
+    subgraph External Dependencies
         SOLR[Apache Solr Server]
         COUCH[Apache CouchDB Server]
     end
 
-    subgraph NativeComponents
+    subgraph Native Components
         LLAMACPP[llama.cpp Shared Library]
         TESS[Tesseract OCR]
     end
