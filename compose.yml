@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  solr:
+    image: solr:9.6
+    ports:
+      - "8983:8983"
+    volumes:
+      - solr_data:/var/solr
+    command:
+      - solr-precreate
+      - documents # This creates the core on startup
+
+  couchdb:
+    image: couchdb:3.3
+    ports:
+      - "5984:5984"
+    volumes:
+      - couchdb_data:/opt/couchdb/data
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=password
+
+volumes:
+  solr_data:
+  couchdb_data:
